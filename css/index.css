@@ -299,5 +299,16 @@ footer {
     display: flex;
     flex-direction: column;
   }
-  
+ .top-content {
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .bottom-content {
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 500px;
+    margin: 0;
+  }
 }
