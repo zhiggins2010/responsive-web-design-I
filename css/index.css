@@ -16,15 +16,20 @@ h1, h2, h3, h4, h5 {
 }
 
 .container {
-  width: 880px;
+  width: 90%;
   /* TB LR */
-  margin: 2% 2% 2% 2%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 /* header */
 
 header{
-	display: flex;
+  max-width: 100%;
+  display: flex;
 	justify-content: center;
 	align-items: center;
 }
@@ -66,9 +71,11 @@ header .logo {
 /* cta */
 
 .cta {
-	display: flex;
+  max-width: 100%;
+  display: flex;
+  flex-shrink: 2;
 	justify-content: center;
-	align-items: center;
+  align-items: center;
 }
 
 .cta .cta-text {
@@ -101,6 +108,7 @@ header .logo {
 }
 
 .main-content {
+  max-width: 100%;
   border-top: 1px solid black;
   margin-top: 76px;
   padding-top: 39px;
@@ -109,7 +117,7 @@ header .logo {
 .main-content .top-content {
   padding: 0 10px;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   
 }
 
@@ -195,4 +203,47 @@ footer {
   margin: 32px 0;
   text-align: center;
   font-size: 14px;
+}
+
+/***** Responsive styles *****/
+
+@media (max-width: 800px) {
+  .container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+  }
+  header {
+    display: flex;
+    flex-direction: column-reverse;
+    flex-wrap: wrap;
+  }
+  .cta img{
+    display: none;
+  }
+}
+
+@media (max-width: 500px) {
+  .container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+  header {
+    display: flex;
+    flex-direction: column-reverse;
+    flex-wrap: wrap;
+  }
+  header nav {
+    display: flex;
+    flex-direction: column;
+  }
+  header nav a {
+    border-top: 2px solid black;
+    width: 100%;
+  }
 }
