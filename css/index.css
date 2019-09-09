@@ -16,7 +16,7 @@ h1, h2, h3, h4, h5 {
 }
 
 .container {
-  width: 90%;
+  width: 800px;
   /* TB LR */
   margin: auto;
   display: flex;
@@ -138,6 +138,7 @@ header .logo {
 .main-content .bottom-content {
   margin-top: 37px;
   padding: 0 10px;
+  display: flex;
 }
 
 .main-content .bottom-content .text-content {
@@ -213,6 +214,7 @@ footer {
     flex-direction: column;
     justify-content: center;
     margin: 0 auto;
+    background-color: red;
   }
   header {
     display: flex;
